@@ -30,14 +30,28 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    
+    var rippleShader: SKShader!
+    var mainSprite: SKSpriteNode!
+    
     override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!";
-        myLabel.fontSize = 45;
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
+
+        // Make a Label
+        let shaderLabel = SKLabelNode()
+        shaderLabel.text = "Shaders for SpriteKit";
+        shaderLabel.fontSize = 45;
+        shaderLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:(self.frame.height - (shaderLabel.frame.height * 2)));
+        self.addChild(shaderLabel)
         
-        self.addChild(myLabel)
+        // Make a Shader
+        rippleShader = SKShader(fileNamed: "Twirl.fsh")
+        
+        // Make a Sprite
+        mainSprite = SKSpriteNode(imageNamed:"Spaceship")
+        mainSprite.position = CGPoint(x:CGRectGetMidX(self.frame),y:CGRectGetMidY(self.frame))
+        mainSprite.shader = rippleShader
+        self.addChild(mainSprite)
+        
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {

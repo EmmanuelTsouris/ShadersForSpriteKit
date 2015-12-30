@@ -15,6 +15,8 @@
 		1406F3231C33C20000262C68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1406F3221C33C20000262C68 /* Assets.xcassets */; };
 		1406F3261C33C20000262C68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1406F3241C33C20000262C68 /* LaunchScreen.storyboard */; };
 		1406F32E1C33C2B500262C68 /* License in Resources */ = {isa = PBXBuildFile; fileRef = 1406F32D1C33C2B500262C68 /* License */; };
+		1406F3311C33C85500262C68 /* RippleEffect.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 1406F3301C33C85500262C68 /* RippleEffect.fsh */; };
+		1406F3331C33CA7400262C68 /* PondRipples.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 1406F3321C33CA7400262C68 /* PondRipples.fsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +29,9 @@
 		1406F3221C33C20000262C68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1406F3251C33C20000262C68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1406F3271C33C20000262C68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1406F32D1C33C2B500262C68 /* License */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License; sourceTree = "<group>"; };
+		1406F32D1C33C2B500262C68 /* License */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = License; path = ShadersForSpriteKit/License; sourceTree = "<group>"; };
+		1406F3301C33C85500262C68 /* RippleEffect.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = RippleEffect.fsh; sourceTree = "<group>"; };
+		1406F3321C33CA7400262C68 /* PondRipples.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = PondRipples.fsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,7 @@
 		1406F30B1C33C20000262C68 = {
 			isa = PBXGroup;
 			children = (
+				1406F32D1C33C2B500262C68 /* License */,
 				1406F3161C33C20000262C68 /* ShadersForSpriteKit */,
 				1406F3151C33C20000262C68 /* Products */,
 			);
@@ -60,17 +65,34 @@
 		1406F3161C33C20000262C68 /* ShadersForSpriteKit */ = {
 			isa = PBXGroup;
 			children = (
+				1406F3361C33CDBE00262C68 /* Shaders */,
 				1406F3171C33C20000262C68 /* AppDelegate.swift */,
 				1406F3191C33C20000262C68 /* GameScene.sks */,
 				1406F31B1C33C20000262C68 /* GameScene.swift */,
 				1406F31D1C33C20000262C68 /* GameViewController.swift */,
-				1406F31F1C33C20000262C68 /* Main.storyboard */,
 				1406F3221C33C20000262C68 /* Assets.xcassets */,
-				1406F3241C33C20000262C68 /* LaunchScreen.storyboard */,
-				1406F3271C33C20000262C68 /* Info.plist */,
-				1406F32D1C33C2B500262C68 /* License */,
+				1406F32F1C33C44400262C68 /* iOS */,
 			);
 			path = ShadersForSpriteKit;
+			sourceTree = "<group>";
+		};
+		1406F32F1C33C44400262C68 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1406F31F1C33C20000262C68 /* Main.storyboard */,
+				1406F3241C33C20000262C68 /* LaunchScreen.storyboard */,
+				1406F3271C33C20000262C68 /* Info.plist */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		1406F3361C33CDBE00262C68 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				1406F3301C33C85500262C68 /* RippleEffect.fsh */,
+				1406F3321C33CA7400262C68 /* PondRipples.fsh */,
+			);
+			name = Shaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,7 +154,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1406F31A1C33C20000262C68 /* GameScene.sks in Resources */,
+				1406F3331C33CA7400262C68 /* PondRipples.fsh in Resources */,
 				1406F3261C33C20000262C68 /* LaunchScreen.storyboard in Resources */,
+				1406F3311C33C85500262C68 /* RippleEffect.fsh in Resources */,
 				1406F3231C33C20000262C68 /* Assets.xcassets in Resources */,
 				1406F32E1C33C2B500262C68 /* License in Resources */,
 				1406F3211C33C20000262C68 /* Main.storyboard in Resources */,
